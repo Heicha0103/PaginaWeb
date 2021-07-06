@@ -1,0 +1,58 @@
+body{
+    font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+}
+
+p{
+    font-family: Georgia, 'Times New Roman', Times, serif;
+}
+#footer{
+    background: green;
+    height: 250px;
+    width: 100%;
+    color: white;
+}
+#memes img{
+    width: 100%;
+    height: 300px;
+}
+#memes col-lg-3{
+    margin: 0 !important;
+    padding: 20px;
+}
+
+#memes img:hover{
+    border: 5px solid white;
+}
+
+#titulo{
+    color: rgb(103, 34, 168);
+    font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+    
+}
+
+#lugarFav{
+    background: rgb(206, 205, 205);
+    padding: 50px 0 30px 0;
+    text-align: center;
+    margin-top: 20px;
+}
+
+#navbar-example3{
+    flex-direction: column;
+    margin-right: 10px;
+    color:#e0b8fc;
+    position: absolute;
+    left: 88%;
+    top: 96px;
+    width: 12%;
+    text-align: center;
+}
+
+#contenido{
+    float: left;
+    width: 88%;
+   }
+
+.clear{
+    clear: both;
+}
