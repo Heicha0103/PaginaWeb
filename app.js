@@ -10,12 +10,11 @@ app.use('/css', express.static(__dirname + 'public/css'))
 app.use('/imagenes', express.static(__dirname + 'public/imagenes'))
 app.use('/js', express.static(__dirname + 'public/js'))
 
-app.get('/', (req, res)=>{
-    res.sendFile(__dirname + '/views/index.html')
-})
+app.set('views','./views')
+app.set('view engine', 'ejs')
 
-app.get('/registro-form.html', (req, res)=>{
-    res.sendFile(__dirname + '/views/registro-form.html')
+app.get('', (req, res)=>{
+    res.render('index')
     
 })
 
