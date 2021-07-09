@@ -16,6 +16,7 @@ app.get('/', (req, res)=>{
 
 app.get('/registro-form.html', (req, res)=>{
     res.sendFile(__dirname + '/views/registro-form.html')
+    
 })
 
 app.listen(port, ()=> console.info(`Escuchando en el puerto ${port}`));
