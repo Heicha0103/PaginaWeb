@@ -1,4 +1,35 @@
-const {response} = require('express');
+require("dotenv").config();
+
+const express = require("express");
+const cors = require("cors");
+const path = require("path");
+
+const routes = require("../routes/index");
+
+const app = express();
+
+// settings
+const port = 8000;
+app.set("port", process.env.PORT || port);
+
+// middlewares
+app.use(cors());
+app.use(
+    express.urlencoded({
+        extended: false,
+    })
+);
+app.use(express.json());
+
+// routes
+app.use("/api/", routes);
+
+// static files
+app.use(express.static(path.join(__dirname, "../public")));
+
+module.exports = app;
+
+/*const {response} = require('express');
 const express = require('express');
 const app = express();
 
@@ -18,7 +49,7 @@ app.get('', (req, res)=>{
     
 })
 
-app.listen(port, ()=> console.info(`Escuchando en el puerto ${port}`));
+app.listen(port, ()=> console.info(`Escuchando en el puerto ${port}`));*/
 
 /*const path = require('path');
 
